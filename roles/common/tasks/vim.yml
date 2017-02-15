@@ -11,3 +11,7 @@
   copy:
     src: .vimrc
     dest: "{{ ansible_env.HOME }}/.vimrc"
+- name: vim - install gvim
+  apt:
+    name: vim-gtk
+  sudo: yes
