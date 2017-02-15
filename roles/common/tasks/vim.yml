@@ -1,4 +1,3 @@
----
 - name: vim - download vim
   apt:
     name: vim

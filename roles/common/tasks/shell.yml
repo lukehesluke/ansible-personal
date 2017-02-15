@@ -1,4 +1,3 @@
----
 - name: shell - copy inputrc
   copy:
     src: .inputrc

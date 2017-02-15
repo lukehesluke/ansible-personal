@@ -33,5 +33,5 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
 fi
 
-PATH=$PATH:~/bin
-EDITOR=vim
+export PATH=$PATH:~/bin
+export EDITOR=vim
