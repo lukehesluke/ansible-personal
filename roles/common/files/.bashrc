@@ -33,5 +33,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
 fi
 
-export PATH=$PATH:~/bin
+# For Windows Subsystem for Linux with Xming
+export DISPLAY=':0'
+export PATH=./node_modules/.bin:~/bin:~/.local/bin:$PATH
 export EDITOR=vim
