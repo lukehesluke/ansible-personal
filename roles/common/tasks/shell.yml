@@ -1,0 +1,9 @@
+---
+- name: shell - copy inputrc
+  copy:
+    src: .inputrc
+    dest: "{{ ansible_env.HOME }}/.inputrc"
+- name: shell - copy bashrc
+  copy:
+    src: .bashrc
+    dest: "{{ ansible_env.HOME }}/.bashrc"

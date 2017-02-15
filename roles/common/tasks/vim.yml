@@ -1,0 +1,14 @@
+---
+- name: vim - download vim
+  apt:
+    name: vim
+    update_cache: yes
+  sudo: yes
+- name: vim - checkout vim github project
+  git:
+    repo: https://github.com/lukehesluke/vim
+    dest: "{{ ansible_env.HOME }}/.vim"
+- name: vim - copy vimrc
+  copy:
+    src: .vimrc
+    dest: "{{ ansible_env.HOME }}/.vimrc"

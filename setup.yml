@@ -1,0 +1,5 @@
+- name: Local machine set-up playbook
+  hosts: local
+  connection: local
+  roles:
+    - common
