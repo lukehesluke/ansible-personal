@@ -2,3 +2,7 @@
   copy:
     src: .gitconfig
     dest: "{{ ansible_env.HOME }}/.gitconfig"
+- name: git - copy bitbucket ssh config
+  copy:
+    src: .sshconfig
+    dest: "{{ ansible_env.HOME }}/.ssh/config"
