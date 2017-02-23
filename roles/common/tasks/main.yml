@@ -2,3 +2,4 @@
 - include: vim.yml
 - include: git.yml
 - include: node.yml
+- include: spacemacs.yml
