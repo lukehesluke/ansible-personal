@@ -2,10 +2,6 @@
   git:
     repo: https://github.com/syl20bnr/spacemacs
     dest: "{{ ansible_env.HOME }}/.emacs.d"
-- name: spacemacs - install tabbar
-  git:
-    repo: https://github.com/evacchi/tabbar-layer
-    dest: "{{ ansible_env.HOME }}/.emacs.d/private/tabbar"
 - name: spacemacs - copy .spacemacs
   copy:
     src: .spacemacs
