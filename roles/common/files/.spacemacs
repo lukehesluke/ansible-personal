@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     react
      javascript
      yaml
      clojure
@@ -310,8 +311,16 @@ you should place your code here."
   (defvaralias 'cperl-indent-level 'tab-width)
   (setq js2-strict-missing-semi-warning nil)
   (setq js2-missing-semi-one-line-override t)
-  (setq-default js2-basic-offset 2)
-  (setq-default js-indent-level 2)
+  (setq-default
+   ;; js2-mode
+   js2-basic-offset 2
+   js-indent-level 2
+   ;; web-mode
+   css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2)
   (global-evil-tabs-mode t)
   )
 
