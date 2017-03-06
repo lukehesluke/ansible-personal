@@ -1,4 +1,4 @@
-- name: vim - download vim
+- name: vim - install vim
   apt:
     name: vim
     update_cache: yes

@@ -1,3 +1,7 @@
+- name: spacemacs - install emacs
+  apt:
+    name: emacs24
+  sudo: yes
 - name: spacemacs - install spacemacs
   git:
     repo: https://github.com/syl20bnr/spacemacs
