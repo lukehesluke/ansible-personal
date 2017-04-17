@@ -6,3 +6,9 @@
   copy:
     src: .bashrc
     dest: "{{ ansible_env.HOME }}/.bashrc"
+- name: shell - copy profile
+  copy:
+    src: .profile
+    dest: "{{ ansible_env.HOME }}/.profile"
+- name: shell - install historian
+  shell: curl --create-dirs -o ~/bin/hist https://raw.githubusercontent.com/jcsalterego/historian/master/hist
