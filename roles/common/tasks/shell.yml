@@ -1,3 +1,13 @@
+- name: shell - install sqlite3 (needed for historian)
+  apt:
+    name: sqlite3
+  sudo: yes
+- name: shell - install historian
+  shell: curl --create-dirs -o ~/bin/hist https://raw.githubusercontent.com/jcsalterego/historian/master/hist
+- name: shell - make historian executable
+  file:
+    path: "{{ ansible_env.HOME }}/bin/hist"
+    mode: 0777
 - name: shell - copy inputrc
   copy:
     src: .inputrc
@@ -11,5 +21,7 @@
   copy:
     src: .bashrc
     dest: "{{ ansible_env.HOME }}/.bashrc"
-- name: shell - install historian
-  shell: curl --create-dirs -o ~/bin/hist https://raw.githubusercontent.com/jcsalterego/historian/master/hist
+- name: shell - copy profile
+  copy:
+    src: .profile
+    dest: "{{ ansible_env.HOME }}/.profil"

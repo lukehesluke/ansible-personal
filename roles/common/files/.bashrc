@@ -90,8 +90,5 @@ fi
 export PATH=./node_modules/.bin:~/bin:~/.local/bin:$PATH
 export EDITOR=vim
 
-# Import bash history to historian (https://github.com/jcsalterego/historian#super-installation)
-~/bin/hist import
-
 # Local machine-specific bash config
 source ~/.bashrc.local
