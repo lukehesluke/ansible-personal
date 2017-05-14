@@ -1,3 +1,10 @@
+- name: shell - install ack-grep
+  apt:
+    name: ack-grep
+  sudo: yes
+- name: shell - rename `ack-grep` to `ack`
+  shell: dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
+  sudo: yes
 - name: shell - install sqlite3 (needed for historian)
   apt:
     name: sqlite3
