@@ -2,6 +2,11 @@
   copy:
     src: .inputrc
     dest: "{{ ansible_env.HOME }}/.inputrc"
+- name: shell - ensure bashrc.local exists
+  copy:
+    content: ""
+    dest: "{{ ansible_env.HOME }}/.bashrc.local"
+    force: no
 - name: shell - copy bashrc
   copy:
     src: .bashrc
