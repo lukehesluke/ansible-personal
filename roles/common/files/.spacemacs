@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     python
      sql
      markdown
      react
@@ -63,6 +64,7 @@ values."
    dotspacemacs-additional-packages
    '(
      evil-tabs
+     nodejs-repl
      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -314,6 +316,7 @@ you should place your code here."
   (setq js2-strict-missing-semi-warning nil)
   (setq js2-missing-semi-one-line-override t)
   (setq-default
+   python-tab-width 2
    ;; js2-mode
    js2-basic-offset 2
    js-indent-level 2
@@ -325,7 +328,7 @@ you should place your code here."
    web-mode-attr-indent-offset 2)
   (global-evil-tabs-mode t)
   (cider-repl-toggle-pretty-printing)
-  )
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode)))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
